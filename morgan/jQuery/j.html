@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>jQuery Experiments</title></html>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script type='text/javascript' src='jquery.color.js'></script>
+<script type='text/javascript' src='script.js'></script>
+<script type="text/javascript">                                         
+   
+
+ $(document).ready(function() {
+   
+   $('#hideButton').click(function() {
+   $('#data').hide();
+   });
+   
+   $('#hideRow2').click(function() {
+   $('.row2').toggle();
+	if ($('.row2').is(':visible')) {
+	$(this).val('Hide Row2');
+	} else {
+	$(this).val('Show Row2');
+	}
+   });
+   
+   
+   $('p').animate({'backgroundColor':'#ff9f5f'}, 2000);
+   
+   
+ });
+
+                                    
+</script>   
+<!-- 
+
+   $('p').animate({
+   padding: '20px',
+   borderBottom: '3px solid #8f8f8f',
+   borderRight: '3px solid #bfbfbf'
+   }, 2000);
+
+//-->                                                            
+</head>                                                                 
+<body>                                                                  
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+	<br />
+	<br />
+	
+	<input type="button" id="hideButton" value="Hide Table" />
+	<input type="button" id="hideRow2" value="Hide Row2" />
+	
+	<table id="data">
+	<thead>
+	<tbody>
+	<tr class="row"><td><input type="button" id="toggleButton" value="Show/Hide" /></td><td>a</td><td>b</td><td>c</td></tr>
+	<tr class="row2"><td><input type="button" id="toggleButton" value="Show/Hide" /></td><td>d</td><td>e</td><td>f</td></tr>
+	<tr class="row"><td><input type="button" id="toggleButton" value="Show/Hide" /></td><td>g</td><td>h</td><td>i</td></tr>
+	</tbody>
+	</table>
+	
+	
+
+                                       
+</body>                                                                 
+</html>

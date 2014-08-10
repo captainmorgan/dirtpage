@@ -1,0 +1,629 @@
+  
+body  { background-color: black;
+color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 12pt;
+}
+
+.smallpink{
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+}
+
+
+.tinypink{
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 10pt;
+}
+
+.smallyellow{
+color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+
+}
+
+
+
+.smallgreen{
+color: green;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+
+}
+
+
+
+.bigyellow{
+color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 18pt;
+
+}
+
+
+.smallred{
+color: indianred;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+
+}
+
+
+.bigred{
+color: indianred;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 18pt;
+}
+
+
+.hugeyellow{
+color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 30pt;
+}
+
+.hugered{
+color: indianred;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 30pt;
+}
+
+.bigblue{
+color: aqua;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 18pt;
+
+}
+
+.tinygreen{
+color: green;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 12pt;
+}
+
+.tinywhite{
+color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 12pt;
+}
+
+.tinypink{
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 12pt;
+}
+
+.smallwhite{
+color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+}
+
+.bigwhite{
+color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 18pt;
+}
+
+.smallblack{
+color: black;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 14pt;
+}
+
+.tinyblack{
+color: black;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 10pt;
+}
+
+
+a:link {
+	color: #0CF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #0CF;
+}
+a:hover {
+	text-decoration: none;
+	color: #FFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+
+
+
+
+#header {
+position: absolute;
+top: 10px;
+left: 45px;	
+width: 1000px;
+}
+
+#ticker {position: absolute;
+top: 20px;
+left: 50px; 
+height: 30px;visibility: hidden; }
+	
+#logo {position: absolute;
+top: 20px;
+left: 0px;}
+
+#navbar {position: absolute;
+top: 80px;
+left: 2px; }
+
+#search {  position: absolute;
+top: 35px;
+left: 275px;}
+
+#vnav {
+position: absolute;
+top: 200px;
+left: 5px;	
+width: 100px;
+background-color: darkslategray;
+margin-bottom: 30px;
+border: 2px solid green;
+
+}
+
+
+#holder
+		{background-color: darkslategray;
+		position: absolute;
+		top: 160px;
+left: 38px;	
+width: 600;
+margin-bottom: 30px;
+border: 0px solid white ;
+padding: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.redtitle {
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 24pt;
+padding-bottom: 30px;
+}
+
+.pinktitle {
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 24pt;
+padding-bottom: 30px;
+}
+
+.topic {color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 18pt;
+font-weight: 100;}
+
+.comment2, .smalltopic {color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.comment, .message {color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.message2 {color: indianred;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 18pt;
+font-weight: 100;}
+
+.message_b
+{color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;
+margin: 20px;}
+
+.m {color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 10pt;
+font-weight: 10;}
+
+.garbage {color: yellowgreen;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;
+}	
+
+.biggarbage {color: yellowgreen;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 18pt;
+font-weight: 100;
+}	
+
+h1 {
+color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-weight: 100;
+font-size: 50pt;
+}
+
+h3 {
+color: indianred;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 20pt;
+font-weight: 100;
+}
+
+ 
+h4 {color: cyan;
+color: cyan;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 15pt;
+font-weight: 100;
+}
+
+h5 {color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 15pt;
+font-weight: 100;
+}
+
+
+
+
+.supertopic {color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 26pt;
+font-weight: 100;}
+
+.redtopic {color: pink;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 18pt;
+font-weight: 100;}
+
+.t {color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.topic2 {color: antiquewhite;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.garbagescore {color: teal;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 11pt;
+font-weight: 100;}
+ 
+.feed-view, .feed-view-t {color: khaki;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.feed-chat {color: seagreen;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.feed-post1, .feed-post1-t {color: violet;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+.feed-post2, .feed-post2-t {color: white;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+.feed-search {color: yellow;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size: 14pt;
+font-weight: 100;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#output
+{background-color: darkslategray;
+margin-bottom: 30px;
+border: 2px solid white;
+padding: 10px;
+min-height: 539px;
+}
+
+
+
+#topic_preview, #messages_preview, #pictures_preview, #see_also_preview, #link_preview
+		{
+margin-bottom: 30px;
+
+padding: 10px;
+
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.edit
+		{
+			
+color: white;
+font-size: 14pt;
+
+
+}
+
+.card, .search
+		{
+			
+
+border-bottom: 1px dotted white ;
+
+}
+
+
+#datax
+		{position: relative; top: 0ppx;}
+
+#container {
+	position: absolute;
+top: 200px;
+left: 40px;
+width: 800px;
+
+min-width: 550px;
+	
+}
+
+
+#messagematches
+		{
+position: relative;
+padding-left: 25px;
+
+			}
+
+#messageresults
+		{position: relative; top: 40px;
+		}
+
+  
+#boxesX
+		{
+	position: fixed;
+	left: 605px;
+	
+		top: 163px;}
+	  
+.resultsX
+		{
+	
+	
+	
+	height: 250px;
+		border: 2px solid white ;
+		background-color: indigo;
+		padding: 10px;
+		overflow: auto;
+		visibility: "hidden";
+	width: 500px;
+	overflow:auto;
+		}
+
+
+ 
+
+	  
+.resultsX
+		{
+				 
+	margin-top: 15px;
+		max-width: 500px;
+		height: 250px;
+		
+	
+		border: 2px solid white ;
+		background-color: green;
+		padding: 10px;
+			overflow: auto;
+	
+		}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+#post
+		{
+	
+			left: 100px;
+	
+		}
+
+
+
+
+	.manip {
+		float:right;
+		}
+		 
+
+
+	 
+	 #exactmatch
+		{
+	
+		border: 1px solid white ;
+		padding: 25px;	
+		}
+	 
+
+	 
+	 
+
+
+#dirt,#feed, #div1
+		{
+			position: absolute;
+	        left: 50px;
+	top: 330;
+	
+			width: 400px;
+		
+		
+			overflow: auto;
+			
+	
+		}
+		
+
+#old
+		{
+	
+			
+			visibility: hidden;
+		}
+			
+		
+	
+
+
+#div3
+		{
+	position: fixed;
+	left: 800px;
+	
+		
+			width: 300px;
+
+			padding: 5px;
+			
+			overflow: auto;
+		}
+
+
+}	
+	
+}

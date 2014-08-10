@@ -1,0 +1,141 @@
+/* Reset */
+/**************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+body {
+line-height: 1;
+color: black;
+background: white;
+}
+ol, ul {
+list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: separate;
+border-spacing: 0;
+}
+caption, th, td {
+text-align: left;
+font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: "";
+}
+blockquote, q {
+quotes: "" "";
+}
+
+.clearfix:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+}
+.clearfix {display: inline-block;}    
+/* Hides from IE-mac \*/  
+* html .clearfix {height: 1%;}  
+.clearfix {display: block;}  
+/* End hide from IE-mac */
+
+
+/* HTML5 */
+/****************************************************************************/
+
+section, article, aside, header, footer, nav, dialog, figure {
+ display: block;
+}
+
+/* Common */
+/****************************************************************************/
+
+body {
+font-size: 75%;
+font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+line-height: 1.2em;
+color: #333;
+}
+
+
+h1,h2,h3,h4 {
+font-weight: bold;
+margin: 1.2em 0 0.8em;
+}
+
+h1 {
+font-size: 1.4em;
+}
+
+h2 {
+font-size: 1.2em;
+}
+
+strong, .strong {
+font-weight: bold;
+}
+
+em, .em, cite {
+font-style: italic;
+}
+
+p,ul,ol,dl,div.row,div.rule,hr,li,pre {
+margin: 0 0 0.7em;
+}
+
+blockquote {
+margin: 0 2em;
+font-style: italic;
+}
+
+a {
+text-decoration: none;
+color: #555;
+text-decoration: underline;
+}
+
+.clear {
+clear: both;
+}
+
+acronym {
+border-bottom: 1px dotted #666;
+}
+
+/* Structure */
+/****************************************************************************/
+#wrapper {
+margin: 2em;
+}
+
+ul.details {
+border-bottom: 0.1em solid #666;
+padding-bottom: 1em;
+}
+
+/* Digg */
+div.digg {
+float: right;
+}

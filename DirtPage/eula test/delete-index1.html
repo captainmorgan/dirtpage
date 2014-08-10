@@ -1,0 +1,78 @@
+<html> 
+<head> 
+ 
+<title> dirtpage </title> 
+<link rel="stylesheet" href="eula.css" type="text/css"> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script> 
+<script type="text/javascript" src="jquery.cookie-modified.js"></script> 
+
+
+<script>
+$(document).ready(function() {
+// Hide the EULA box if the user has previously agreed to our terms within the past 30 days
+$('#eula').hide();
+var e = $.cookie('dpeula');
+if (e != 1) {
+	// If the user has not agreed to the EULA, slide it into view
+		$('#eula').slideDown('slow');
+} // END if
+
+	$('#eula-show').click(function() {
+    $('#eula').slideDown('slow');
+    return false;
+  });
+  
+	// Hide and accept the EULA  
+	$('#eula-hide').click(function() {
+	$.cookie('dpeula', 1, { expires: 30, path: '/'});
+	$('#eula').slideUp('fast');
+    return false;
+  });
+  
+	// Delete the cookie
+	$('#eula-deletecookie').click(function() {
+	$.cookie('dpeula', 2, { expires: 30, path: '/'});
+	return false;
+	});
+  
+}); // END (document).ready
+</script>
+
+</head>
+
+<body>
+
+<div id = "eula">
+Before posting to dirtpage you must agree to our terms and conditions. <a href="#" id="eula-hide"><span class="eula_i-agree">I Agree</span></a>
+</div>
+
+<div id = "blah">
+<br><br>
+<br><br>
+<br><br>
+This text is not in the EULA div.<br><br>
+<a href="#" id="eula-show">show the EULA again.</a><br>
+<a href="#" id="eula-deletecookie">delete the cookie that remembers if you signed the EULA.</a><br>
+</div>
+<br>
+
+
+<div id="combo-post">
+<table class="combo-post_table" cellpadding="0" role="search">
+<tbody>
+<tr>
+<td class="combo-post_instructions-td">post new message: </td>
+<td class="combo-post_textbox-td">
+<input class="combo-post_textbox" type="text" onsubmit="return false" maxlength="100" tabindex="0" aria-haspopup="true">
+</td>
+<td class="combo-post_buttons-td">
+<div class="combo-post_buttons_select-image" role="button" tabindex="0" style="-webkit-user-select: none; " aria-pressed="false">Choose Image</div>
+<div class="combo-post_buttons_post" role="button" tabindex="0" style="-webkit-user-select: none; " aria-pressed="false">Post</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</body>
+</html>

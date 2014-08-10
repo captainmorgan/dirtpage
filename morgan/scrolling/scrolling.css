@@ -1,0 +1,33 @@
+/* 
+Parallax Experiment
+Date: 2nd April 2009
+Author: Paul Hayes
+ */
+ 
+#background {
+	background: url('foreground.png') 5% 5%, url('midground.png') 50% 50%, url('background.png') 90% 110%;
+	top: 218px; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	-webkit-transition: left 300s linear;
+}
+
+#experiment:target #background {
+	left: -5000px;
+}
+
+#experiment:hover #background {
+	left: -9999px;
+}
+
+#content {
+	margin: 10em;
+	background-color: #333;
+	opacity: 0.95;
+	color: #ccc;
+	padding: 5em;
+	position: fixed;
+	border: 2px solid #666;
+}

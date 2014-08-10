@@ -1,0 +1,73 @@
+<html>
+<head>
+<script type="text/javascript">
+function showUser(str)
+{
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  } 
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","morgan_ajax_php_php.php?q="+str,true);
+xmlhttp.send();
+}
+
+function showResult(str)
+{
+if (str.length==0)
+  { 
+  document.getElementById("livesearch").innerHTML="";
+  document.getElementById("livesearch").style.border="0px";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+xmlhttp.open("GET","livesearch.php?q="+str,true);
+xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+<p>This livesearch box looks at an pre-defined XML file each time a character is typed in the box.  If it finds something similar, it suggests it below:</p>
+<form>Type:&nbsp;<input onkeyup="showResult(this.value)" size="30" type="text" />
+<div id="livesearch"></div>
+</form>
+<p>&nbsp;</p>
+<p>This page uses AJAX to query a database. Select the comment ID from the drop down and the comment will appear below. Notice the entire page does not refresh.</p>
+<form> Comment ID:&nbsp;<input onkeyup="showUser(this.value)" size="30" type="text" />&nbsp;Favorites:
+
+<select name="users" onchange="showUser(this.value)"> <option>Select a comment ID:</option> <option value="1">1</option> <option value="2">2</option><option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> </select> </form>
+<div id="txtHint"><strong>Database info will be listed here.</strong></div>
+<p>&nbsp;</p>
+</body>
+</html>

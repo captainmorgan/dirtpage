@@ -1,0 +1,137 @@
+<html> 
+<head> 
+ 
+<title> dirtpage </title> 
+
+<link rel="stylesheet" href="eula.css" type="text/css"> 
+<link rel="stylesheet" href="button.css" type="text/css"> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script> 
+<script type="text/javascript" src="jquery.cookie-modified.js"></script> 
+<script type="text/javascript" src="jquery.sparkline.js"></script>
+
+<script>
+$(document).ready(function() {
+// Hide the EULA box if the user has previously agreed to our terms within the past 30 days
+$('#eula').hide();
+var e = $.cookie('dpeula');
+if (e != 1) {
+	// If the user has not agreed to the EULA, slide it into view
+		$('#eula').slideDown('slow');
+		$('.combo-post_buttons-td').hide();
+} // END if
+
+	$('.eula-show').click(function() {
+    $('#eula').slideDown('slow');
+	$('.combo-post_buttons-td').hide();
+    return false;
+  });
+  
+	// Hide and accept the EULA  
+	$('#eula-hide').click(function() {
+	$.cookie('dpeula', 1, { expires: 30, path: '/'});
+	$('#eula').slideUp('fast');
+	$('.combo-post_buttons-td').show();
+    return false;
+  });
+  
+	// Delete the cookie
+	$('.eula-deletecookie').click(function() {
+	$.cookie('dpeula', 2, { expires: 30, path: '/'});
+	return false;
+	});
+  
+	// Sparklines (courtesy http://omnipotent.net/jquery.sparkline/)
+	$('.inlinesparkline').sparkline();
+	var myvalues = [10,8,99,7,64,34,3,2,3,1,3,41,1,43,64,34,3,2,3];
+	var myvaluespie = [30,40,10, 15];
+	var myvaluestri = [10,-8,-99,0,64,0,3,-2,3,-1,3,0,0,-43,64,0,3,2,3];
+    $('.dynamicsparkline').sparkline(myvalues);
+	$('.dynamicpie').sparkline(myvaluespie, {type: 'pie', sliceColors: ['#ff6666','#ffcc99','#ffff99','#99cc66']} );
+	$('.dynamictri').sparkline(myvaluestri, {type: 'tristate', posBarColor: '#99cc66', negBarColor: '#ccffff'} );
+	$('.inlinebar').sparkline('html', {type: 'bar', barColor: 'red'} );
+	$('.bigpie').sparkline(myvaluespie, {type: 'pie', height: '200px', sliceColors: ['#ff6666','#ffcc99','#ffff99','#99cc66']} );
+	
+	
+}); // END (document).ready
+</script>
+
+</head>
+
+<body>
+
+<div id = "eula">
+Before posting to dirtpage you must agree to our terms and conditions. <a href="#" class="btn" id="eula-hide"><span><span><b>&nbsp;</b><u>I Agree</u></span></span></a>
+</div>
+
+<div id = "blah">
+<br><br>
+<br><br>
+<br><br>
+This text is not in the EULA div.<br><br>
+<a href="#" class="eula-show">show the EULA again.</a><br>
+<a href="#" class="eula-deletecookie">delete the cookie that remembers if you signed the EULA.</a><br>
+</div>
+<br>
+
+<div id="combo-post">
+<table class="combo-post_table" cellpadding="0" role="search">
+<tbody>
+<tr>
+<td class="combo-post_instructions-td">post new message: </td>
+<td class="combo-post_textbox-td">
+<input class="combo-post_textbox" type="text" onsubmit="return false" maxlength="100" tabindex="0" aria-haspopup="true">
+</td>
+<td class="combo-post_buttons-td">
+
+<a href="#" class="btn" id="btn_select-image"><span><span><b>&nbsp;</b><u>Choose Image</u></span></span></a>
+<a href="#" class="btn" id="btn_post"><span><span><b>&nbsp;</b><u>&nbsp;&nbsp;Post&nbsp;&nbsp;</u></span></span></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<br><br>
+<div class="buttons">
+&nbsp;&nbsp;<a href="#" class="btn eula-show"><span><span><b>&nbsp;</b><u>Show EULA</u></span></span></a>
+<br><br>
+
+&nbsp;&nbsp;<button type="button" class="btn eula-deletecookie"><span><span><b>&nbsp;</b><u>Delete Cookie</u></span></span></button>
+<br><br>
+
+<!--
+<br><br>
+<button type="button" class="btn primary"><span><span><b>&nbsp;</b><u>Save</u></span></span></button>&nbsp;<button type="button" class="btn"><span><span><b>&nbsp;</b><u>Cancel</u></span></span></button> 
+-->
+
+<div class="sparklines">
+<p>
+Inline Sparkline: <span class="inlinesparkline">7,5,9,10,7,5,null,11,15,12,18,22</span>.
+</p>
+<p>
+Sparkline with dynamic data: <span class="dynamicsparkline">Loading..</span>
+</p>
+<p>
+Pie graph with dynamic data: <span class="dynamicpie">Loading..</span>
+</p>
+<p>
+Tristate graph with dynamic data: <span class="dynamictri">Loading..</span>
+</p>
+<p>
+Bar graph with inline data: <span class="inlinebar">1,3,4,5,3,5</span>
+</p>
+<p>
+Bar graph with inline data and negative values: <span class="inlinebar">1,3,-3,-4,0,3,5,-4,0,3,4,2,-1,5,3,-5</span>
+</p>
+</div>
+<br><br>
+
+<div id="widget_piegraph">
+&nbsp;&nbsp;<span class="bigpie">Loading..</span><br>
+</div>
+
+</div>
+
+</body>
+</html>

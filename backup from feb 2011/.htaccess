@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^page/(.*)$ http://www.dirtpage.com/pages.php?topic=$1
+RewriteRule ^results/(.*)$ http://www.dirtpage.com/search.php?topic=$1
+RewriteRule ^nav/(.*)$ http://www.dirtpage.com/stats.php?stat=$1
+                               
